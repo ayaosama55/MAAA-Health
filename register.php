@@ -6,6 +6,6 @@ if ($_SERVER['REQUEST_METHOD'] == "GET") {
     if ($result) {
         require_once "success.php";
     } else {
-        echo "No";
+        require_once "cancel.php";
     }
 }
