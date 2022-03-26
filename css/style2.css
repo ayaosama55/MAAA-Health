@@ -1,3 +1,7 @@
+body { 
+    overflow-x: hidden !important;
+}
+
 * {
     padding:0;
     margin: 0;
@@ -203,4 +207,49 @@
     margin-left: 12px;
     width: 70px;
     height: 80px;
+}
+
+/* Success Page */
+.success {
+    height:100vh;
+}
+.success .img-responsive {width:100%}
+.success .image {
+    height:100vh;
+    background-image: url("../imgs/undraw_Accept_terms_re_lj38.png");
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.success-content {
+    color: #1A4466;
+    position: relative;
+    height: 100vh;
+}
+.success-content .text {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.success-content .text h1 {
+    font-size:60px;
+    font-family: cursive;
+}
+.success-content .text p {
+    font-size: 32px;
+    margin-bottom: 36px;
+}
+.success-content .text .back-main {
+    background-color: #1A4466;
+    color: #fff;
+    padding: 15px 20px;
+    font-size: 20px;
+    margin-top: 20px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: 0.3s;
+    text-decoration: none;
+}
+.success-content .text .back-main:hover {
+    background-color: #2F2E41
 }
