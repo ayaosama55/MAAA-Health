@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -8,13 +10,13 @@
     </head>
     <body>
         <section class="main">
-            
+
             <div class="container content">
-                <div class="logo">Welcome in MAAA Health</div>
+                <div class="logo">Welcome in <img src="imgs/2.png" ></div>
                 <div class="row">
                     <div class="col-md-4">
                         <div class="qr">
-                            <img src="imgs/qr.png" >
+                            <img src="imgs/qr.jpg" >
                         </div>
                         <div class="steps">
                             <ol>
@@ -29,15 +31,15 @@
                             <div class="form_Register">
                                 <h2>Register Using MRN</h2>
                                 <p class="lead">Make sure you enter the correct code and from uppercase and lowercase letters</p>
-                                <form action="#" method="GET">
-                                    <input class="form-control form-control-lg" type="text" placeholder="Enter MRN" name="name" aria-label=".form-control-lg example">
-                                    <button type="submit" class="btn mb-3">Confirm identity</button>
+                                <form action="register.php" method="GET">
+                                    <input class="form-control form-control-lg" type="text" placeholder="Enter MRN" name="mrn" aria-label=".form-control-lg example">
+                                    <button type="submit" class="btn mb-3">Confirm</button>
                                 </form>
                             </div>
                             <div class="form-Generate">
                                 <h2>Create New MRN</h2>
                                 <p class="lead">Be Sure From Entering Correct Data</p>
-                                <form action="#" method="GET">
+                                <form action="<?php echo $_SERVER["PHP_SELF"]; ?>" method="POST">
                                     <div class="row">
                                         <div class="col-md-6">
                                             <input class="form-control form-control-lg " type="text" placeholder="Enter Your Name" name="name" aria-label=".form-control-lg example">
@@ -52,7 +54,7 @@
                                             <input class="form-control form-control-lg col-md-6" type="number" placeholder="Enter Your Age" name="age" aria-label=".form-control-lg example">
                                         </div>
                                         <div class="col-md-6">
-                                            <input class="form-control form-control-lg col-md-6" type="phone" placeholder="Enter Your Phone" name="age" aria-label=".form-control-lg example">
+                                            <input class="form-control form-control-lg col-md-6" type="text" placeholder="Enter Your Phone" name="phone" aria-label=".form-control-lg example">
                                         </div>
                                         <div class="state col-md-12">
                                             <label>Your State : </label>
@@ -66,16 +68,25 @@
                                             </div>
                                         </div>
                                         <div class="bbttnn">
-                                            <button type="submit" class="btn mb-3">Confirm identity</button>
+                                            <button type="submit" class="btn mb-3">Create MRN</button>
                                         </div>
                                     </div>
                                 </form>
                             </div>
+                            <div class="form-doc">
+                                <form action="#" method="GET">
+                                    <h2>Login as a Doctor</h2>
+                                    <input class="form-control form-control-lg " type="text" placeholder="Username" name="name" aria-label=".form-control-lg example">
+                                    <input class="form-control form-control-lg " type="password" placeholder="Password" name="name" aria-label=".form-control-lg example">
+                                    <button type="submit" class="btn mb-3">Login</button>
+                                </form>
+                            </div>
                             <span class="Generate_mrn">Create MRN.!</span>
                             <span class="back">&lt;&lt;Back</span>
+                            <span class="doc">Login as a Doctor</span>
                         </div>
                     </div>
-                    
+
                 </div>
             </div>
         </section>
@@ -84,3 +95,26 @@
         <script src="js/file.js"></script>
     </body>
 </html>
+<?php
+//echo $_SERVER['REQUEST_METHOD'];
+if ($_SERVER['REQUEST_METHOD'] == "POST") {
+    $list = array('$', '#', '&', '_');
+    $name = $_POST['name'];
+    $address = $_POST['address'];
+    $age = $_POST['age'];
+    $phone = $_POST['phone'];
+    $ssn = $_POST['ssn'];
+    $MRN = strtoupper(substr($name, 0, 3));
+    shuffle($list);
+    $MRN .= $list[0];
+    $MRN .= substr($ssn, 0, 5);
+    shuffle($list);
+    $MRN .= $list[0];
+    $MRN .= substr($phone, 7, 3);
+    echo "<div class='layout'><div class='alert'>";
+    echo "<button>X</button>Your Medical Record Number Is : <span>" . $MRN;
+    echo "</span></div></div>";
+} else {
+
+}
+?>
