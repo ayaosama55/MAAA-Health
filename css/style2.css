@@ -210,36 +210,49 @@ body {
 }
 
 /* Success Page */
-.success {
+.success, 
+.cancel {
     height:100vh;
 }
 .success .img-responsive {width:100%}
+.cancel .image {
+    background-image: url("../imgs/undraw_Cancel_re_pkdm.png");
+}
 .success .image {
-    height:100vh;
     background-image: url("../imgs/undraw_Accept_terms_re_lj38.png");
+}
+.success .image,
+.cancel .image {
+    height:100vh;
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
 }
-.success-content {
+.success-content,
+.cancel-content {
     color: #1A4466;
     position: relative;
     height: 100vh;
 }
-.success-content .text {
+.success-content .text,
+.cancel-content .text {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
 }
-.success-content .text h1 {
+.success-content .text h1,
+.cancel-content .text h1 {
     font-size:60px;
     font-family: cursive;
 }
-.success-content .text p {
+.cancel-content .text h1 { color: #F00; font-size: 55px}
+.success-content .text p,
+.cancel-content .text p {
     font-size: 32px;
     margin-bottom: 36px;
 }
-.success-content .text .back-main {
+.success-content .text .back-main,
+.cancel-content .text .back-main {
     background-color: #1A4466;
     color: #fff;
     padding: 15px 20px;
@@ -252,4 +265,7 @@ body {
 }
 .success-content .text .back-main:hover {
     background-color: #2F2E41
+}
+.cancel-content .text .back-main:hover {
+    
 }

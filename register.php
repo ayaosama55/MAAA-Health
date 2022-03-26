@@ -4,7 +4,7 @@ if ($_SERVER['REQUEST_METHOD'] == "GET") {
     $mrn = $_GET['mrn'];
     $result = array_key_exists($mrn, $MRN);
     if ($result) {
-
+        require_once "success.php";
     } else {
         echo "No";
     }
