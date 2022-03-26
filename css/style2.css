@@ -1,0 +1,135 @@
+* {
+    padding:0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.main {
+    width:100%;
+    background-image:url(../imgs/test.png);
+    background-repeat:no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding: 50px 0;
+    min-height: 100vh;
+    padding-top: 70px;
+}
+
+.main .content {
+    padding:20px;
+    background-color:#c3e8f4;
+    border-radius:15px;
+    box-shadow: 5px 5px 20px rgba(0,0,0,0.3);
+    position: relative;
+}
+.main .logo {
+    position:absolute;
+    font-weight: bold;
+    font-size:20px;
+    color:#FFF;
+    top: -40px;
+    font-family: cursive;
+}
+@media(max-width:768px) {
+    .container {
+        width:94% !important;
+    }
+}
+.main .content .qr {
+    text-align:center;
+}
+.main .content .qr img {
+    width:250px;
+    height:250px;
+    margin-top:50px;
+}
+.main .content .steps {
+    font-size:18px;
+    color:#1A4466;
+    padding:20px 0 10px 30px;
+}
+.main .content .steps li {
+    margin-bottom:10px
+}
+.main .form_Register {
+    display:block;
+}
+.main .form_MRN {
+    padding:40px 10px 0 0;
+    color: #1A4466;
+}
+.main .form_MRN h2 {
+    font-family: cursive;
+    margin-bottom: 20px;
+}
+.form_Register .form-control {
+    margin-top: 30px;
+    width: 60%;
+}
+.main .form_MRN .btn {
+    background-color: #095A9C;
+    color: #e4dfd9;
+    font-size:19px;
+    font-weight: bold;
+    width: 60%;
+    margin-top: 15px;
+}
+.btn-check:focus + .btn, .btn:focus {
+    outline: 0;
+    box-shadow: 0 0 0 0.25rem rgb(9, 90, 156, .25);
+}
+.form_Register .form-control:focus,
+.form-Generate .form-control:focus {
+    color: #212529;
+    background-color: #fff;
+    border-color: #095A9C;
+    outline: 0;
+    box-shadow: 0 0 0 0.25rem rgb(9, 90, 156, .25);
+}
+.main .form-Generate {
+    display: none;
+}
+.main .Generate_mrn, 
+.main .back {
+    font-size:17px;
+    cursor: pointer;
+    color:#095A9C;
+    transition: 0.2s all ease-in-out;
+}
+.main .Generate_mrn:hover, 
+.main .back:hover {
+    text-decoration:underline;
+    color: #1A4466;
+}
+.main .back {
+    display: none
+}
+.form-check-input:focus {
+    border-color: #095A9C;
+    outline: 0;
+    box-shadow: 0 0 0 0.25rem rgb(9, 90, 156, .25);
+}
+.form-check-input:checked {
+    background-color: #1A4466;
+    border-color: #1A4466;
+}
+.form-Generate .row >div {
+    margin-bottom: 10px
+}
+.form-Generate h2 {
+    margin-bottom:10px !important
+}
+.form-Generate .state >label {
+    font-size: 19px;
+    margin-right: 20px;
+}
+.form-Generate .form-check {
+    display:inline-block !important;
+    margin-right: 20px;
+}
+.bbttnn {
+    text-align: center;
+}
+.bbttnn button {
+    background-color: #1A4466 !important;
+    color: #fff !important;
+}
